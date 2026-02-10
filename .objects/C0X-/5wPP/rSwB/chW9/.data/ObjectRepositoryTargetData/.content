@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="nPluuXLjlESZcCGGcSmvSQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="bc205e86-98f6-4a58-9907-5fa5f5cff429" CvTextArea="582, 687, 156, 19" CvTextArgument="Registeryour account" CvType="Text" DesignTimeRectangle="584, 684, 153, 21" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='Register your account' tag='A' /&gt;" Guid="d5dcd608-2329-477f-8550-c4249a5fd025" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="67032ad15e67acc4c989c370cbdfd0b8.jpg" xmlns="">07zyoym2tg0GYcgaVCVrB7A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

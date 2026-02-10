@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ftkK1fiXKEeUZRO_8sgG4g" Reference="0_a1KnUSU0-KYH9y1uL7mg/aXwOaop8oU64no-CL_Vx9g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="newtab" DesignTimeRectangle="318, 391, 746, 48" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='New Tab' role='document' /&gt;&lt;ctrl idx='16' role='grouping' /&gt;" Guid="046c83af-eae9-4227-bfb2-dad32464f4c2" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="dcf8760a61937a74267c37c2f1e1f6c9.jpg" xmlns="">0095pzM14TEC4B0n2cIG2MA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

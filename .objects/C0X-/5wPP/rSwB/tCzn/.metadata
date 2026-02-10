@@ -1,0 +1,14 @@
+﻿{
+  "Name": "First name",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "tCznn5jagUKCeqTNdX-RiA",
+  "Reference": "0_a1KnUSU0-KYH9y1uL7mg/tCznn5jagUKCeqTNdX-RiA",
+  "ParentRef": "0_a1KnUSU0-KYH9y1uL7mg/rSwB8d3fwEOaAo3BO6Rcig",
+  "Created": "2026-02-10T13:01:45.6216009Z",
+  "Updated": "2026-02-10T13:01:45.6216009Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
