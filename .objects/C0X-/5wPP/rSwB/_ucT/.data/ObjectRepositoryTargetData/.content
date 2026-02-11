@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MwZuMoog-Uuy9e0yc3UcYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="8d675cc2-a2ff-43a0-a2e4-076ccdce4c83" CvElementArea="412, 448, 542, 40" CvType="InputBox" DesignTimeRectangle="413, 449, 541, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='dob' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='YYYY-MM-DD' aaname='Date of Birth *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="8ff15356-6bc5-4135-90eb-08ef0c3ab0b6" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8d675cc2-a2ff-43a0-a2e4-076ccdce4c83" CvTextArea="412, 422, 102, 14" CvTextArgument="Date of Birth *" CvType="Text" DesignTimeRectangle="413, 417, 100, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Date of Birth *' tag='LABEL' type='' class='form-label' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Date of Birth *' /&gt;" Guid="91aaa05e-7abf-4992-a17e-ef7b8ce4d72f" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e52fe3a9d117ef18e7c92f057cb00a1e.jpg" xmlns="">01GvU7G9PfkqruISZ0qCWaQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
