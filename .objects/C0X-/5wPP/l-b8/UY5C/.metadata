@@ -1,0 +1,13 @@
+﻿{
+  "Name": "FA-ICON",
+  "Type": "Element",
+  "Id": "UY5CahtroEyupjqWiXq9Yg",
+  "Reference": "0_a1KnUSU0-KYH9y1uL7mg/UY5CahtroEyupjqWiXq9Yg",
+  "ParentRef": "0_a1KnUSU0-KYH9y1uL7mg/l-b8ncNjKEmDdK2qiWapTQ",
+  "Created": "2026-02-11T12:12:43.9194036Z",
+  "Updated": "2026-02-11T12:12:43.9194036Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

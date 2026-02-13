@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4uROIjYA9EqzxYyOfzzvDg" Reference="0_a1KnUSU0-KYH9y1uL7mg/UY5CahtroEyupjqWiXq9Yg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/product/01KH695J94472JBG5ZDJA086P1" CVScreenId="e80118e7-9e73-416c-80f4-757169da1ccd" CvElementArea="1133, 166, 44, 31" CvType="Icon" DesignTimeRectangle="1135, 179, 20, 16" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='img' tag='svg' /&gt;" Guid="15c1806b-56b2-40fa-a79b-27631be76df7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEoSURBVEhLY/jx89d/SvAT18D/jyxdcWIGmMIdO3f+X75i5f/Dh49gGIIPoxuIjuEWhIeHw/H06TMwDMKFifYBDK9dtx7FMkJ4v4MXhqF4LTh2/ASGIfjwNE8/DEPxWnD/wUMMQ/Dh+NCw/7es3TEMxmkBCCenpGAYhA/3+wRgGIzXgpqaWgxDCOF57tiDCqsFU6dOwzCAEM7Jyf3/Ye0mjFSF1QJSUxIIz5s3H6z3+7sP/98tWv7/eWYR2DKsFpCakiZMnPj/3fsPGOaAMFYLYClp2/btGHKkYqwWgHB9Q8P/9IwMcPGBD4OKGHS9RFlw4eKl/+0dHRjBgQ2j6yXKAmphvBaAggDkQhBNihwyxmsBvmDAJ4eM8VqAz5X45JAxXguogWluAQCXfvCNiV+UpgAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hammer - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="33f3fe4190f791601a6e723d7a1eedb0.jpg" xmlns="">0bu8-zKyFgUehFhU0DgQ1SA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UcQMz8O+ez4=",
+  "dgSpecHash": "gqWeuV039ig=",
   "success": true,
   "projectFilePath": "C:\\Users\\Vishu\\uiPath friday\\tools-shop-demo\\.local\\",
   "expectedPackageFiles": [
@@ -95,6 +95,7 @@
     "C:\\Users\\Vishu\\.nuget\\packages\\polly\\7.1.0\\polly.7.1.0.nupkg.sha512",
     "C:\\Users\\Vishu\\.nuget\\packages\\radcommons.core\\2.0.1\\radcommons.core.2.0.1.nupkg.sha512",
     "C:\\Users\\Vishu\\.nuget\\packages\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
+    "C:\\Users\\Vishu\\.nuget\\packages\\reporterforuipath.activities\\3.0.1\\reporterforuipath.activities.3.0.1.nupkg.sha512",
     "C:\\Users\\Vishu\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Vishu\\.nuget\\packages\\runtime.any.system.diagnostics.tools\\4.3.0\\runtime.any.system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\Vishu\\.nuget\\packages\\runtime.any.system.diagnostics.tracing\\4.3.0\\runtime.any.system.diagnostics.tracing.4.3.0.nupkg.sha512",

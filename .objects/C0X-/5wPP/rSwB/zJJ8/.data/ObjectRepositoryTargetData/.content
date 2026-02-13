@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="j3-0wWYWa0OuB6BCwGCk0Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/product/01KH8VJCPB7M77E7DT0RK4Z3CF" CVScreenId="4ac221ad-c00d-4e3f-a4b3-55b1cd2ed5ef" CvElementArea="695, 605, 135, 41" CvTextArea="735, 617, 82, 15" CvTextArgument="Add to cart" CvType="Button" DesignTimeRectangle="696, 606, 133, 38" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btn-add-to-cart' tag='BUTTON' /&gt;" Guid="7aa943ca-8465-4617-a8e7-efb4e43234e8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hammer - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e471da2caca34bd2545fd9409de265fb.jpg" xmlns="">0e04UgY2zJEeQK2_u-CykfQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

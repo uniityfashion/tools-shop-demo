@@ -1650,6 +1650,28 @@
           }
         }
       },
+      "ReporterForUiPath.Activities/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ReporterForUiPath.Activities.Design.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0-windows7.0/ReporterForUiPath.Activities.dll": {
+            "related": ".Design.xml;.xml"
+          },
+          "lib/net6.0-windows7.0/ReporterForUiPath.dll": {
+            "related": ".Activities.Design.xml;.Activities.xml;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
         "type": "package",
         "runtimeTargets": {
@@ -7061,6 +7083,28 @@
             "related": ".xml"
           }
         }
+      },
+      "ReporterForUiPath.Activities/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ReporterForUiPath.Activities.Design.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0-windows7.0/ReporterForUiPath.Activities.dll": {
+            "related": ".Design.xml;.xml"
+          },
+          "lib/net6.0-windows7.0/ReporterForUiPath.dll": {
+            "related": ".Activities.Design.xml;.Activities.xml;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
@@ -13427,6 +13471,23 @@
         "rbush.signed.4.0.0.nupkg.sha512",
         "rbush.signed.nuspec",
         "readme.md"
+      ]
+    },
+    "ReporterForUiPath.Activities/3.0.1": {
+      "sha512": "eO2Y+CTqN7WtUBykk1L1w6OKImkags1Winm8hDyJNfH8FuXPNSIwsRlaiLzlHmyokhCQz4JArRiCRjDAIla+lw==",
+      "type": "package",
+      "path": "reporterforuipath.activities/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net6.0-windows7.0/ReporterForUiPath.Activities.Design.dll",
+        "lib/net6.0-windows7.0/ReporterForUiPath.Activities.Design.xml",
+        "lib/net6.0-windows7.0/ReporterForUiPath.Activities.dll",
+        "lib/net6.0-windows7.0/ReporterForUiPath.Activities.xml",
+        "lib/net6.0-windows7.0/ReporterForUiPath.dll",
+        "lib/net6.0-windows7.0/ReporterForUiPath.xml",
+        "packageIcon.png",
+        "reporterforuipath.activities.3.0.1.nupkg.sha512",
+        "reporterforuipath.activities.nuspec"
       ]
     },
     "runtime.any.System.Collections/4.3.0": {
@@ -21697,6 +21758,7 @@
   "projectFileDependencyGroups": {
     "": [],
     "net8.0-windows7.0": [
+      "ReporterForUiPath.Activities >= 3.0.1 <= 3.0.1",
       "UiPath.Excel.Activities >= 3.3.1 <= 3.3.1",
       "UiPath.System.Activities >= 25.12.0-preview <= 25.12.0-preview",
       "UiPath.Testing.Activities >= 25.10.0 <= 25.10.0",
@@ -21725,6 +21787,11 @@
     "frameworks": {
       "net8.0-windows7.0": {
         "dependencies": {
+          "ReporterForUiPath.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[3.0.1, 3.0.1]"
+          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",

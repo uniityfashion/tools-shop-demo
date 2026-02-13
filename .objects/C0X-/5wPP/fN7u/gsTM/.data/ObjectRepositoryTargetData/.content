@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Gwyue8_r5Eue13LDSxv4UQ" Reference="0_a1KnUSU0-KYH9y1uL7mg/gsTMFcc2dkqjUopPWDk9cw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/checkout" CVScreenId="41d3797d-5ae4-432f-9151-b3f4b3c137c2" DesignTimeRectangle="423, 419, 535, 38" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='SELECT' matching:tag='fuzzy' fuzzylevel:tag='0.0' aaname='Payment Method' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="6c114fc0-9120-4f84-b7ad-4574ce6ad8e6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Checkout - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="df022492c763124dd3a78e4180dc0762.jpg" xmlns="">0DzWIBf5QS0OcgFcw6xkJNw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

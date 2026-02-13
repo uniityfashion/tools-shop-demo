@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-_wma8BhJk2T54XUKG3tKw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/checkout" CVScreenId="de7808a9-d17c-45ea-af93-cd14616d4a38" CvElementArea="867, 537, 86, 41" CvTextArea="879, 550, 59, 15" CvTextArgument="Confirm" CvType="Button" DesignTimeRectangle="868, 539, 83, 38" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname=' Confirm ' tag='BUTTON' type='button' /&gt;" Guid="a80d5371-095a-4eb1-83c2-42027e911990" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Checkout - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="02d3468983a3bd9ddcd84abfeb47257f.jpg" xmlns="">0xb7dIT__DUKQpH35CbRnGQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

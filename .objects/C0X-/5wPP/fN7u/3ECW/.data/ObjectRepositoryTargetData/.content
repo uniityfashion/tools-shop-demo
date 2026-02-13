@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ClkQwUQIb0y5KV4MoU5YmQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/checkout" CVScreenId="44bca892-267e-4b61-a412-ef6f9aaf1add" CvTextArea="422, 330, 451, 15" CvTextArgument="Thanks for your order! Your invoice number is INV-2026000002." CvType="Text" DesignTimeRectangle="412, 326, 558, 24" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='order-confirmation' tag='DIV' /&gt;" Guid="8a1dbe7f-c176-44f3-9574-76f768a12ee6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Checkout - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="aa2de46d7fb7b52cbf79cb5d37e4f41b.jpg" xmlns="">0DqbbJUPgvUa6yvN3Jdsi3g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

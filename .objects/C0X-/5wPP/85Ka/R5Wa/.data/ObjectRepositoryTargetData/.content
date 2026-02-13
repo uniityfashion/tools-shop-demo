@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1U3mAQ6smU21h147tKUZkw" Reference="0_a1KnUSU0-KYH9y1uL7mg/R5WanwEFv0G4KWUEwlJK-g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/checkout" CVScreenId="6ff7774f-7a7b-439e-bb9e-f1e95d699ceb" CvElementArea="874, 485, 86, 41" CvTextArea="887, 498, 59, 15" CvTextArgument="Confirm" CvType="Button" DesignTimeRectangle="875, 487, 83, 38" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname=' Confirm ' tag='BUTTON' type='button' /&gt;" Guid="3076b992-bb43-474e-a439-a0bd50b90a53" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Checkout - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="208c118d-bb24-4162-974b-44fdb8a1f9cf" CvElementArea="423, 420, 536, 60" CvType="InputBox" DesignTimeRectangle="424, 421, 534, 58" FuzzySelectorArgument="&lt;webctrl type='' class='alert alert-success ng-star-inserted' tag='DIV' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Payment was successful' /&gt;" Guid="d6c19832-58cc-4511-99c2-3be07ae76cd5" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="aff0d20fdcc04f6ef16064ba8d779306.jpg" xmlns="">0jg3EkyD2DUGITqzAexznjw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

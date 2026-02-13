@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="oUvKtkhrb0C8VA4njf9G5w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="bdceb022-e7e6-403e-8157-f460688d83cf" CvElementArea="411, 410, 262, 40" CvType="InputBox" DesignTimeRectangle="413, 411, 259, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='first_name' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='First name *' aaname='First name' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e33c7cf9-e627-43b8-9fd7-f8d3612c678e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="929f5abd0fc4745517ad347e9b911cf1.jpg" xmlns="">0W5TiGFv52EuKEDv44OYI1w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -4,6 +4,7 @@
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
+    "ReporterForUiPath.Activities": "[3.0.1]",
     "UiPath.Excel.Activities": "[3.3.1]",
     "UiPath.System.Activities": "[25.12.0-preview]",
     "UiPath.Testing.Activities": "[25.10.0]",
@@ -47,6 +48,48 @@
         "testCaseId": "168a488e-96b3-49c1-8f21-c18cff311783",
         "testCaseType": "TestCase",
         "fileName": "TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "22e260df-2762-4fd6-afa4-5d7a1c8b0cba",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "tests\\TestCase1.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "5f0f8d6a-58d5-4357-92da-80c6e1e97ff6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "tests\\TC1_login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d1b4aac6-b2ea-4ed8-a8ce-3b94f3d71f7c",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "tests\\TestCase2.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "4b0c982b-a2dd-4a70-88e4-1e6dc7328adf",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "tests\\TestCase3.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "b9243566-f5b2-4211-92c7-91de158659f2",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "tests\\TestCase4.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "b794c130-8e7d-476d-aa39-ac4238dd2bc5",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "tests\\TestCase5.xaml"
       }
     ],
     "saveToCloud": false

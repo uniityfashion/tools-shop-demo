@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="rw1WzLiXwUK73uKmNG4QYA" Reference="0_a1KnUSU0-KYH9y1uL7mg/5nz5zABoO0W2EsdLE3_iXg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/checkout" CVScreenId="033484e2-032c-4a26-8cab-dc3f141a18a0" DesignTimeRectangle="1039, 219, 149, 40" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='menu' tag='A' /&gt;" Guid="23c6b8bb-20bc-427a-97ad-7caa708a613d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Checkout - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="279ea2ea16ec8e7b83b2a174011ce7af.jpg" xmlns="">0R6dvhui-rkeGXOKtUKqFQA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

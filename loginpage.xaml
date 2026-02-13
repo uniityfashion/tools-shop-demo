@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="loginpage" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="loginpage" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -39,6 +39,9 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
+      <x:String>System.Numerics</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
@@ -104,6 +107,9 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -111,7 +117,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="loginpage" sap:VirtualizedContainerService.HintSize="741,5014" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="loginpage" sap:VirtualizedContainerService.HintSize="727,6787" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="SignUpData" />
       <Variable x:TypeArguments="x:String" Name="LastName" />
@@ -129,14 +135,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="479,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Sheet1" WorkbookPath="Book 4.xlsx">
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="488,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Sheet1" WorkbookPath="Book 4.xlsx">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">SignUpData</CSharpReference>
         </OutArgument>
       </ui:ReadRange.DataTable>
     </ui:ReadRange>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,428" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="488,428" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -262,29 +268,88 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Practice Software Testing - Toolshop -" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="479,4443" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Practice Software Testing - Toolshop -" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,6216" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,4249" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,6022" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="452,171" sap2010:WorkflowViewState.IdRef="StepStatus_2" Status="Info" StepDescription="verify opening of home page" StepName="reached home page" TakeScreenshot="True">
+              <ra:StepStatus.ReportId>
+                <InArgument x:TypeArguments="x:Int32">
+                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">GlobalVariablesNamespace.GlobalVariables.reportVar</CSharpValue>
+                </InArgument>
+              </ra:StepStatus.ReportId>
+              <ra:StepStatus.TestId>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">GlobalVariablesNamespace.GlobalVariables.test_0</CSharpValue>
+                </InArgument>
+              </ra:StepStatus.TestId>
+            </ra:StepStatus>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DelayBefore="2" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="52ec6b49-a179-4dd8-92d1-9db15a39dea4" ContentHash="ff3TvN1-W0KpelbVKA01JA" CvTextArea="1123, 231, 50, 19" CvTextArgument="Sign in" CvType="Text" DesignTimeRectangle="1116, 219, 65, 40" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Sign in' class='nav-link' parentid='navbarSupportedContent' tag='A' /&gt;" Guid="20760419-0079-498f-984c-78fe1fc1b02a" InformativeScreenshot="de3fc7d924fa92e1144895ea009fa35a.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/m7V3n5bRek6nez4bqooF2A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register your account'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register your account'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="bc205e86-98f6-4a58-9907-5fa5f5cff429" ContentHash="nPluuXLjlESZcCGGcSmvSQ" CvTextArea="582, 687, 156, 19" CvTextArgument="Registeryour account" CvType="Text" DesignTimeRectangle="584, 684, 153, 21" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='Register your account' tag='A' /&gt;" Guid="d5dcd608-2329-477f-8550-c4249a5fd025" InformativeScreenshot="67032ad15e67acc4c989c370cbdfd0b8.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/chW9VBzFBk-uwJxvPOX4pg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'First name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'INPUT first_name'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,801" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Timeout="1" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,162" sap2010:WorkflowViewState.IdRef="StepStatus_3" Status="Pass" StepDescription="verify reaching registration page" StepName="registracion page load" TakeScreenshot="True">
+                    <ra:StepStatus.ReportId>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">GlobalVariablesNamespace.GlobalVariables.reportVar</CSharpValue>
+                      </InArgument>
+                    </ra:StepStatus.ReportId>
+                    <ra:StepStatus.TestId>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">GlobalVariablesNamespace.GlobalVariables.test_0</CSharpValue>
+                      </InArgument>
+                    </ra:StepStatus.TestId>
+                  </ra:StepStatus>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,162" sap2010:WorkflowViewState.IdRef="StepStatus_4" Status="Fail" StepDescription="verify failing registration page" StepName="registracion page fail" TakeScreenshot="True">
+                    <ra:StepStatus.ReportId>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">GlobalVariablesNamespace.GlobalVariables.reportVar</CSharpValue>
+                      </InArgument>
+                    </ra:StepStatus.ReportId>
+                    <ra:StepStatus.TestId>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">GlobalVariablesNamespace.GlobalVariables.test_0</CSharpValue>
+                      </InArgument>
+                    </ra:StepStatus.TestId>
+                  </ra:StepStatus>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="bdceb022-e7e6-403e-8157-f460688d83cf" ContentHash="oUvKtkhrb0C8VA4njf9G5w" CvElementArea="411, 410, 262, 40" CvType="InputBox" DesignTimeRectangle="413, 411, 259, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='first_name' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='First name *' aaname='First name' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e33c7cf9-e627-43b8-9fd7-f8d3612c678e" InformativeScreenshot="929f5abd0fc4745517ad347e9b911cf1.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/QCapvcytq0Oscl7DqLdezQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'First name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="787b04ca-ceb3-4a7b-aea1-155cfa0b9b34" ContentHash="1LznrCQ-NEqw7kR0QIUSyg" CvElementArea="411, 261, 262, 41" CvType="InputBox" DesignTimeRectangle="413, 263, 259, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='first_name' tag='INPUT' type='text' class='form-control ng-pristine ng-invalid ng-touched' placeholder='First name *' aaname='First name' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="06f31292-3490-4644-ba84-5e5668645cfe" InformativeScreenshot="88b993bb860aa75bb1ed05923598d315.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/tCznn5jagUKCeqTNdX-RiA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -310,7 +375,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Last name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Last name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="bd2ed60e-5d76-4aad-b0c1-e3cb98a96e85" ContentHash="a5SQX8Mga0ug7r7hKMI1CA" CvElementArea="695, 361, 260, 41" CvType="InputBox" DesignTimeRectangle="696, 363, 258, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='last_name' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='Your last name *' aaname='Last name' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e064f731-350b-4013-9463-bc5f30ab5c8c" InformativeScreenshot="549f0816281a3c804b0e0ab620df93e1.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/YttSj18QiU2N63Ie9XLeSw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -336,11 +401,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Date of Birth *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Date of Birth *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="8d675cc2-a2ff-43a0-a2e4-076ccdce4c83" ContentHash="MwZuMoog-Uuy9e0yc3UcYQ" CvElementArea="412, 448, 542, 40" CvType="InputBox" DesignTimeRectangle="413, 449, 541, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='dob' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='YYYY-MM-DD' aaname='Date of Birth *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="8ff15356-6bc5-4135-90eb-08ef0c3ab0b6" InformativeScreenshot="e52fe3a9d117ef18e7c92f057cb00a1e.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/_ucTGXA4fEW8iAwiH8papw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="8d675cc2-a2ff-43a0-a2e4-076ccdce4c83" CvTextArea="412, 422, 102, 14" CvTextArgument="Date of Birth *" CvType="Text" DesignTimeRectangle="413, 417, 100, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Date of Birth *' tag='LABEL' type='' class='form-label' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Date of Birth *' /&gt;" Guid="91aaa05e-7abf-4992-a17e-ef7b8ce4d72f" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -362,11 +427,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Street'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Street'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="755b0b93-ae14-4fcf-b4fc-427f26ab8730" ContentHash="kf8G2lVRJEK4BYKnXNHFMg" CvElementArea="412, 534, 542, 40" CvType="InputBox" DesignTimeRectangle="413, 535, 541, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='street' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='Your Street *' aaname='Street' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="874a781d-3d63-4758-a768-566b605bac2e" InformativeScreenshot="2e1c6a4e6cfa4d30dfaa4092308c95c9.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/n7U7N2iCKkKTg7AyTnefzQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="755b0b93-ae14-4fcf-b4fc-427f26ab8730" CvTextArea="412, 508, 43, 14" CvTextArgument="Street" CvType="Text" DesignTimeRectangle="413, 503, 41, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Street' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Street' /&gt;" Guid="227478af-e32d-4438-a18c-8b6d7c72a9be" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -388,11 +453,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Postal code'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Postal code'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="df0c7c64-80d2-4901-a428-4fb014f4007c" ContentHash="ZDBRevcaY0m_0wIcQ6POBw" CvElementArea="412, 619, 168, 41" CvType="InputBox" DesignTimeRectangle="413, 621, 164, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='postal_code' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='Your Postcode *' aaname='Postal code' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e2a65e8a-3509-4f3b-8268-849976f41eda" InformativeScreenshot="0d44df23f0643bb0bc6f003b83a38dde.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/C5fd0MGKgEiLujPNJqje7w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="df0c7c64-80d2-4901-a428-4fb014f4007c" CvTextArea="412, 593, 82, 15" CvTextArgument="Postal code" CvType="Text" DesignTimeRectangle="413, 589, 81, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Postal code' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Postal code' /&gt;" Guid="34de2e13-1e10-4ea3-a169-97c0deaa05e7" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -414,11 +479,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'City'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'City'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="176ceea9-f136-4742-8ae3-dbc95781ef66" ContentHash="oU3eV-yGTEi-0kIiBiNuHQ" CvElementArea="599, 620, 355, 40" CvType="InputBox" DesignTimeRectangle="601, 621, 353, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='city' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='Your City *' aaname='City' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="07de1e41-1cd8-4caf-a03c-ae2d32f5e779" InformativeScreenshot="f7e54d4f5ee46f726243bb99d984d481.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/y9eCs6J0g02OBZzfgZ93Og" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="176ceea9-f136-4742-8ae3-dbc95781ef66" CvTextArea="600, 594, 29, 18" CvTextArgument="City" CvType="Text" DesignTimeRectangle="601, 589, 27, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='City' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='City' /&gt;" Guid="d4b8a900-1fd3-4179-971d-0de96931c4d4" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -440,11 +505,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'State'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'State'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="c743ea73-9fbd-4f9d-ae8b-b45f10aae21c" ContentHash="10FKKFrNI0CCDEemRE2iVA" CvElementArea="411, 506, 262, 41" CvType="InputBox" DesignTimeRectangle="413, 507, 259, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='state' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='Your State *' aaname='State' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="0b73ff85-5d43-4090-9425-f352aa39755b" InformativeScreenshot="9cfdd09994c91a89c5d3c9dd0ea4bd9a.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/3RfGVCxfI0SlZuXAD-ZSYg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="c743ea73-9fbd-4f9d-ae8b-b45f10aae21c" CvTextArea="412, 480, 37, 14" CvTextArgument="State" CvType="Text" DesignTimeRectangle="413, 475, 35, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='State' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='State' /&gt;" Guid="55c5295c-0e24-44c4-aca8-79e4064a4694" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -466,7 +531,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NSelectItem DisplayName="Select Item 'Country'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="India" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NSelectItem DisplayName="Select Item 'Country'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,204" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="India" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="50">
                   <x:String>French Southern Territories (the)</x:String>
@@ -524,18 +589,18 @@
               <uix:NSelectItem.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="212672bb-2c28-402a-9f4a-e4651ca03860" ContentHash="3JvcaiEESUmTb3Av3_LRlA" CvElementArea="695, 506, 261, 40" CvType="InputBox" DesignTimeRectangle="696, 507, 258, 38" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='country' tag='SELECT' type='' class='form-select ng-untouched ng-pristine ng-invalid' aaname='Country' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="2d40e1af-57bd-4cec-bc35-dc9fe9cd65d9" InformativeScreenshot="ad0c641e3dce0beebb44ea3fb24e0e19.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/0Qx80SYfs0qd7gsyU123XA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="212672bb-2c28-402a-9f4a-e4651ca03860" CvTextArea="694, 480, 59, 18" CvTextArgument="Country" CvType="Text" DesignTimeRectangle="696, 475, 56, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Country' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Country' /&gt;" Guid="2328f5e2-4381-4591-8928-5bdc86825414" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NSelectItem.Target>
             </uix:NSelectItem>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Phone'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Phone'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="a9b50dec-ffdd-4b9b-9d5a-8f8a9dc4bc99" ContentHash="owHvVn8jZ0mBElQxFylNmg" CvElementArea="412, 392, 541, 40" CvType="InputBox" DesignTimeRectangle="413, 393, 541, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='phone' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='Your phone *' aaname='Phone' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="b3b15494-124b-4310-b04e-5139830b757e" InformativeScreenshot="6670c1d10722e895f9482bfd2a3db4f1.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/wOubr2RaLUShuR20WCbTWQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="a9b50dec-ffdd-4b9b-9d5a-8f8a9dc4bc99" CvTextArea="412, 365, 46, 15" CvTextArgument="Phone" CvType="Text" DesignTimeRectangle="413, 361, 44, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Phone' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Phone' /&gt;" Guid="fb2373e1-4da8-4922-81e2-9761251861e9" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -557,11 +622,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Email address'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Email address'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="fbd3c671-17de-4ce5-8b00-b11b946db6e7" ContentHash="TcFMKs9P30q3LvaOogZ1Fw" CvElementArea="411, 477, 544, 40" CvType="InputBox" DesignTimeRectangle="413, 479, 541, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='Your email *' aaname='Email address' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:placeholder='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e7fd2b95-9a6b-47fa-bfc4-c48d0d654b42" InformativeScreenshot="b005a2d1923ad5fd83de8dfd9e7686f1.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/FRr5ylmPQUeVwemZLAF4Vw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="fbd3c671-17de-4ce5-8b00-b11b946db6e7" CvTextArea="412, 451, 98, 15" CvTextArgument="Email address" CvType="Text" DesignTimeRectangle="413, 447, 96, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Email address' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Email address' /&gt;" Guid="4f208319-473b-4c24-a0f9-74c88dc61cc4" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -583,11 +648,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_12" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_12" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="fbd3c671-17de-4ce5-8b00-b11b946db6e7" ContentHash="319TtHZt7EKWAD35CN4wMg" CvElementArea="414, 564, 497, 39" CvType="InputBox" DesignTimeRectangle="413, 565, 496, 38" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control' placeholder='Your password' aaname='Password' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="b0cda137-d937-441c-9b6f-f364d58de69a" InformativeScreenshot="29c127d41ca9bf6a322c6a70cbb4b680.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/L0e4a-24KUKy2Vg0UmXHRQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="fbd3c671-17de-4ce5-8b00-b11b946db6e7" CvTextArea="412, 537, 67, 15" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="413, 533, 66, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Password' /&gt;" Guid="371116d0-0f35-4537-bc9c-0a44dade4a6a" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -609,16 +674,63 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/register" CVScreenId="a910b776-62cc-4ed6-bae0-18b35f00ad93" ContentHash="ZlGpUFl3K0qgsqNuBEFz0A" CvElementArea="398, 423, 287, 44" CvTextArea="511, 438, 62, 19" CvTextArgument="Register" CvType="Button" DesignTimeRectangle="401, 425, 283, 41" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" Guid="c29b7df3-7045-4808-a428-5de52f965ffc" InformativeScreenshot="ecd5b4f15de5b50e11dd8a6001622729.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/RT8mb0fAbE-qYCTMHeD2Jg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Register - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Email address *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_13" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'INPUT email'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,801" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Timeout="10" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,162" sap2010:WorkflowViewState.IdRef="StepStatus_5" Status="Pass" StepDescription="verify reaching login page" StepName="login page load" TakeScreenshot="True">
+                    <ra:StepStatus.ReportId>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">GlobalVariablesNamespace.GlobalVariables.reportVar</CSharpValue>
+                      </InArgument>
+                    </ra:StepStatus.ReportId>
+                    <ra:StepStatus.TestId>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">GlobalVariablesNamespace.GlobalVariables.test_0</CSharpValue>
+                      </InArgument>
+                    </ra:StepStatus.TestId>
+                  </ra:StepStatus>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,162" sap2010:WorkflowViewState.IdRef="StepStatus_6" Status="Fail" StepDescription="verify failing login page" StepName="login page fail" TakeScreenshot="True">
+                    <ra:StepStatus.ReportId>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">GlobalVariablesNamespace.GlobalVariables.reportVar</CSharpValue>
+                      </InArgument>
+                    </ra:StepStatus.ReportId>
+                    <ra:StepStatus.TestId>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">GlobalVariablesNamespace.GlobalVariables.test_0</CSharpValue>
+                      </InArgument>
+                    </ra:StepStatus.TestId>
+                  </ra:StepStatus>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="b2d1a9f6-8028-4977-b9bb-6bc65c702e9f" ContentHash="7fzdCEtNmkSBTA9W3KYdNQ" CvElementArea="486, 431, 396, 40" CvType="InputBox" DesignTimeRectangle="487, 432, 393, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ng-untouched ng-pristine ng-invalid' placeholder='Your email' aaname='Email address *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="53f9ce2a-a88e-49e3-b65e-ad3b95d4c4a3" InformativeScreenshot="9a8734ed2b48cdb1da4293135288f6ac.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/c-lmuAkacUWJ0smqVxYqOA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Email address *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_13" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="6ca4bd55-8895-4527-9cdd-0683c5976b01" ContentHash="x2Ch5gDLckyfcv_8uIKn3Q" CvElementArea="485, 281, 397, 43" CvType="InputBox" DesignTimeRectangle="487, 284, 393, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ng-pristine ng-invalid ng-touched' placeholder='Your email' aaname='Email address *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="62b4f65f-9094-4e90-bd80-707fff316413" InformativeScreenshot="6f4c910c12169d029abe66af5fc96aaf.jpg" IsResponsive="True" Reference="0_a1KnUSU0-KYH9y1uL7mg/e-j0Belat0KLGDMM6-leew" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="6ca4bd55-8895-4527-9cdd-0683c5976b01" CvTextArea="486, 256, 109, 15" CvTextArgument="Email address *" CvType="Text" DesignTimeRectangle="487, 252, 108, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='form-label' aaname='Email address *' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' check:innerText='Email address *' /&gt;" Guid="9c1a22eb-0d17-493e-bb35-810379c9689e" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -640,11 +752,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_14" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_14" InteractionMode="SameAsCard" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="dd3cd710-3154-4ce2-a182-99cb5108205c" ContentHash="fDVQMF0sT0eJ4P6CLuvbwA" CvElementArea="487, 361, 348, 40" CvType="InputBox" DesignTimeRectangle="487, 362, 348, 38" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control' placeholder='Your password' aaname='Password *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="b6859c31-f064-4076-8a45-c1305e720771" InformativeScreenshot="95f204458add328217520068bffb435b.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/nOKZqpL0DEihqDOEgt8sEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="dd3cd710-3154-4ce2-a182-99cb5108205c" CvTextArea="486, 342, 79, 15" CvTextArgument="Password *" CvType="Text" DesignTimeRectangle="487, 338, 77, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Password *' tag='LABEL' type='' class='' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Password *' /&gt;" Guid="a15e69ac-6c2f-44d6-a86a-94a8b72d46c8" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -666,12 +778,12 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="4" DisplayName="Click 'Login'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="cc2ce263-43ab-4d8d-a2b0-73291cf631ad" ContentHash="-XKr6_EPa0Gq6YR_hccG5w" CvElementArea="484, 414, 204, 39" CvTextArea="563, 426, 43, 19" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="487, 416, 197, 36" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" Guid="0b18ed8e-4595-48ef-baca-5cd57d3d39ab" InformativeScreenshot="e6f247d1975829b2368fc8be8aad06b4.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/YHgEV0JiHUyyYkRr4wpaAg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Home'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="3" DisplayName="Click 'Home'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adaa56e9-a54a-4a08-b0f7-fd94f2ba0bf7" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/account" CVScreenId="bb72731b-527e-4fe9-b354-4f65c1b7210f" ContentHash="dgoNO74xjUCw5Ty8_IQ5qw" CvTextArea="809, 180, 44, 14" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="802, 167, 58, 40" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarSupportedContent' tag='A' /&gt;" Guid="eff2b989-1e4b-44ed-817b-9408fb6edeab" InformativeScreenshot="99493ad0517f2c676c93d6a95d32ef2f.jpg" Reference="0_a1KnUSU0-KYH9y1uL7mg/eqbgrv_pUEWMiB8ecSqPfg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Overview - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>

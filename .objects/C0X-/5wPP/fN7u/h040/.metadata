@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Choose your payment met…(4)",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "h040YNpETkK1xJtViIcQfg",
+  "Reference": "0_a1KnUSU0-KYH9y1uL7mg/h040YNpETkK1xJtViIcQfg",
+  "ParentRef": "0_a1KnUSU0-KYH9y1uL7mg/fN7ukMZk1EGVnFkb6ckx8Q",
+  "Created": "2026-02-12T10:48:03.3733079Z",
+  "Updated": "2026-02-12T10:48:03.3733079Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

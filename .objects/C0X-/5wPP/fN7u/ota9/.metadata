@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Payment was successful",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "ota9DD6R1EKskKZbtb7oTA",
+  "Reference": "0_a1KnUSU0-KYH9y1uL7mg/ota9DD6R1EKskKZbtb7oTA",
+  "ParentRef": "0_a1KnUSU0-KYH9y1uL7mg/fN7ukMZk1EGVnFkb6ckx8Q",
+  "Created": "2026-02-12T13:12:36.9475215Z",
+  "Updated": "2026-02-12T13:12:36.9475215Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

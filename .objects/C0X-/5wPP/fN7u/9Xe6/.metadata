@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Privacy Policy",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "9Xe6IAeHCEWBL6Jyftl_eQ",
+  "Reference": "0_a1KnUSU0-KYH9y1uL7mg/9Xe6IAeHCEWBL6Jyftl_eQ",
+  "ParentRef": "0_a1KnUSU0-KYH9y1uL7mg/fN7ukMZk1EGVnFkb6ckx8Q",
+  "Created": "2026-02-12T13:16:57.1952339Z",
+  "Updated": "2026-02-12T13:16:57.1952339Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
